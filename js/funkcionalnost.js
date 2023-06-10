@@ -158,10 +158,12 @@ function univerzalnaFunkcija(operacija){
                 tezina: t.val(),
             },
             success: function(data){
-                    if(data!='Ubacena nova stavka menija!' || data!='Uspešno izmenjena stavka menija!'){
+                    if(data!='Jelo je uspesno izmenjeno u bazi podataka!' || data!='Takvo jelo vec postoji u unosu!'){
                         alert(data);
+                        //
                     } else {
                         alert(data);
+                        //
                     }
                     
                     location.reload();
