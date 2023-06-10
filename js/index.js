@@ -35,7 +35,6 @@ function OdlazakPrijava(){
 
 }
 
-
 function Registracija() {
 
                 var name = $("#imeprezime");
@@ -78,8 +77,6 @@ function Registracija() {
                     }
                 }
 }
-
-            //logika sakrivanja password-a
             function hide(nesto) {
                 var x = document.getElementById(nesto);
                 if (x.type === "password") {
@@ -87,7 +84,6 @@ function Registracija() {
                 } else x.type = "password";
             }
 
-            //logika vizuelnog obracanja u slucaju da je forma prazna!
             function isNotEmpty(poziv) {
                 if (poziv.val() == "") {
                     poziv.css("border", "1px solid red");
