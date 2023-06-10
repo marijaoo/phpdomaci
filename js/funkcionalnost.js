@@ -115,17 +115,17 @@ function izmeniIPogledajFunkcija(broj_reda, tip){
 }
 
 //Funkcija brisanja unosa stavke menija
-function izbrisi(broj_reda){
-    if(confirm('Da li ste sigurni da biste obrisali?')){
+function izbrisi(red){
+    if(confirm('Da li ste sigurni da biste obrisali?' + red)){
         $.ajax({
             url: 'funkcionalnost.php',
             method: 'POST',
             dataType: 'text',
             data: {
                 key: 'izbrisi',
-                restoran_id: broj_reda
+                restoran_id: red
             }, success: function (response) {
-                $("#restoran_"+broj_reda).parent().remove();
+                $("#restoran_"+red).parent().remove();
                 alert(response);
                 location.reload();
             }
