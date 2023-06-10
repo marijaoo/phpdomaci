@@ -116,7 +116,7 @@ function izmeniIPogledajFunkcija(broj_reda, tip){
 
 //Funkcija brisanja unosa stavke menija
 function izbrisi(red){
-    if(confirm('Da li ste sigurni da biste obrisali?' + red)){
+    if(confirm('Da li ste sigurni da biste obrisali?')){
         $.ajax({
             url: 'funkcionalnost.php',
             method: 'POST',
@@ -182,16 +182,6 @@ function isNotEmpty(poziv){
     } else 
         poziv.css('border','');
     return true;
-}
-
-//Vracanje unesenih podataka na prazno
-function resetuj(){
-    document.getElementById('restoran_id').value='';
-    document.getElementById('nazivJela').value='';
-    document.getElementById('sastojci').value='';
-    document.getElementById('vremePripreme').value='';  
-    document.getElementById('cena').value='';  
-    document.getElementById('tezina').value='';  
 }
 
 //Funkcija sortiranja
