@@ -19,6 +19,6 @@ if (mysqli_num_rows($query) == 0) {
     echo 'takav login već postoji.';
 }
 
-
+mysqli_close($conn);
 
 ?>

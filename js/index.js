@@ -1,26 +1,26 @@
 function Prijavljivanje() {
-                var u = $("#username");
-                var p = $("#password");
+    var u = $("#username");
+    var p = $("#password");
 
-                if (isNotEmpty(u) & isNotEmpty(p)) {
-                    $.ajax({
-                        url: "prijavljivanje.php",
-                        method: "POST",
-                        dataType: "text",
-                        data: {
-                            key: "login",
-                            username: u.val(),
-                            password: p.val(),
-                        },
-                        success: function (data) {
-                            if (data == "ERROR") {
-                                alert("Netacni podaci za prijavu. Pokusaj ponovo.");
-                            } else {
-                                window.location = "aplikacija.html";
-                            }
-                        },
-                    });
+    if (isNotEmpty(u) & isNotEmpty(p)) {
+        $.ajax({
+            url: "prijavljivanje.php",
+            method: "POST",
+            dataType: "text",
+            data: {
+                key: "login",
+                username: u.val(),
+                password: p.val(),
+            },
+            success: function (data) {
+                if (data == "ERROR") {
+                    alert("Netacni podaci za prijavu. Pokusaj ponovo.");
+                } else {
+                    window.location = "aplikacija.html";
                 }
+            },
+        });
+    }
 }
 
 function OdlazakRegistracija(){
